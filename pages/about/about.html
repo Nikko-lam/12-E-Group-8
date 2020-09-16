@@ -1,0 +1,54 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Calculator
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+ <h2>PERCENT OFF CALCULATOR APP</h2>
+  <p>
+    This percent off calculator app will determine how much money will you save when you buy an item with a discount price.
+  </p>
+  <p><em>
+    Original Price is the initial price of the item before it is discounted
+  </em></p>
+  <p><em>
+    Percent off is the discount that will be applied in the item
+  </em></p>
+  <p><em>
+    Sales Tax is the tax that will be applied in the item
+  </em></p>
+  <p><em>
+    (*Please Input percent in whole number)
+  </em></p>
+   <br />
+   <ion-item>
+          <ion-label>Original Price (P)</ion-label>
+          <ion-input type="number" [(ngModel)]="initValue"></ion-input>
+        </ion-item>
+    <ion-item>
+          <ion-label>Percent Off (%)</ion-label>
+          <ion-input type="Percent" [(ngModel)]="initValue1"></ion-input>
+        </ion-item>
+<ion-item>
+          <ion-label>Sales Tax (%)</ion-label>
+          <ion-input type="Percent" [(ngModel)]="initValue2"></ion-input>
+        </ion-item>
+
+
+<button ion-button color="primary"  (click)="compute()">Compute</button>
+
+<br /> <br />
+   <ion-item *ngIf="depValue3">
+     <h3> Final price: {{depValue3 | currency:'&#8369;'}}  </h3>
+   </ion-item>
+
+<br /> <br />
+   <ion-item *ngIf="depValue4">
+     <h3> Savings: {{depValue4 | currency:'&#8369;'}}  </h3>
+   </ion-item>
+
+</ion-content>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.8/angular.min.js"></script>

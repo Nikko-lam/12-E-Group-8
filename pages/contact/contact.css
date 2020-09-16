@@ -1,0 +1,18 @@
+ion-content {
+  background: linear-gradient(to bottom,#43c6ac, #191654);
+}
+
+h2 {
+  color:  whitesmoke;
+}
+
+h4 {
+  color:  whitesmoke;
+}
+
+p {
+  font-family: Roboto, Arial,sans-serif;
+  text-align: justify;
+  color:  whitesmoke;
+
+}
